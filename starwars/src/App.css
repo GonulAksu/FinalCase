@@ -1,5 +1,22 @@
+body {
+background-image:linear-gradient(to right,rgba(9, 6, 42, 0.2),rgba(180, 212, 245, 0.2)) !important;
+}
 .App {
   text-align: center;
   margin:auto 50px;
+ 
 }
 
+/* .my-element {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23000" d="M19 3h-14c-1.104 0-2 .896-2 2v14c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2v-14c0-1.104-.896-2-2-2zm-1.414 10.586l-4.172 4.172c-.094.094-.222.146-.354.146s-.26-.052-.354-.146l-2.414-2.414c-.195-.195-.195-.512 0-.707s.512-.195.707 0l1.766 1.766 3.438-3.438c.195-.195.512-.195.707 0s.195.512 0 .707z"/></svg>') 12 12, pointer;
+} */
+
+/* .detailcard::after {
+  content: '\f005';
+  display: inline-block;
+  transform: rotate(45deg);
+} */
+
+.detailcard:hover{
+  cursor: url('./img/icons8-r2-d2-38.png') 16 16, auto;
+}
