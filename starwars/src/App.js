@@ -2,14 +2,25 @@ import './App.css';
 // import SearchList from './components/SearchList';
 import Starships from './components/Starships';
 import { ShipsProvider } from './context/ShipsContext';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <ShipsProvider>
-        <Starships></Starships>
-        {/* <SearchList></SearchList> */}
-      </ShipsProvider>
+      <Router>
+        <ShipsProvider>
+          {/* <Starships></Starships> */}
+          {/* <SearchList></SearchList> */}
+          <Routes>
+            <Route path="/" Component={Starships} />
+          </Routes>
+        </ShipsProvider>
+      </Router>
     </div>
   );
 }

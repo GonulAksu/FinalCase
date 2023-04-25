@@ -6,6 +6,7 @@ const ShipsContext=createContext();
 export const ShipsProvider=({children})=>{
     const [starships,setStarships]=useState([]);
     const [name_model,setName_Model]=useState('');
+    const [loa,setLoa]=useState(true);
     // const [searchApi,setSearchApi]=useState([]);
 
     // useEffect(()=>{
@@ -23,14 +24,17 @@ export const ShipsProvider=({children})=>{
      useEffect(()=>{
         axios(`https://swapi.dev/api/starships/?search=${name_model}`)
         .then((res)=>setStarships(res.data.results))
-        .catch((e)=>console.log(e));
+        .catch((e)=>console.log(e))
+        .finally(()=>setLoa(false))
     },[name_model]);
     
     const values={
         starships,
         setStarships,
         name_model,
-        setName_Model
+        setName_Model,
+        loa,
+        setLoa
         // searchApi,
         // setSearchApi
     }
