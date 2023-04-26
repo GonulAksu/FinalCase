@@ -1,4 +1,5 @@
 import './App.css';
+import Container from './components/Container';
 import ShipDetail from './components/ShipDetail';
 // import SearchList from './components/SearchList';
 import Starships from './components/Starships';
@@ -17,6 +18,7 @@ function App() {
         <ShipsProvider>
           {/* <Starships></Starships> */}
           {/* <SearchList></SearchList> */}
+          <Container></Container>
           <Routes>
             <Route path="/" Component={Starships} />
             <Route path='/ship/:shipId' Component={ShipDetail}/>

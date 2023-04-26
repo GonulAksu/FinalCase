@@ -1,17 +1,21 @@
 import React from 'react';
 import { Grid, Card, CardHeader, CardBody, CardFooter, Stack, Divider, Button, Image, Heading, Text, ButtonGroup, } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import useListShips from '../../context/ShipsContext';
 
 const Detail = ({ ship }) => {
+    const photos=[];
+
     return (
-        <Link  to={`ship/${ship.id}`} variant="link" >
-            <Card className='detailcard' maxW='sm' boxShadow='dark-lg' p='6'>
+        <Link  to={`ship/${ship.length}`} variant="link" >
+            <Card  maxW='sm' boxShadow='2xl' p='4'>
             <Image
-                            src='https://picsum.photos/seed/picsum/100/100'
-                            alt='Green double couch with wooden legs'
+                            src='./assets/X-wing.jpeg'
+                            alt={`${ship.name}`}
                             borderRadius='lg'
+                            className='detailcard'
                         />
-                <CardBody>
+                <CardBody p='2'>
                     <Stack mt='4' spacing='3'>
                         <Heading size='md'> {ship.name}</Heading>
                         <Divider />
