@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Card, CardHeader, CardBody, CardFooter, Stack, Divider, Button, Image, Heading, Text, ButtonGroup, } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import useListShips from '../../context/ShipsContext';
+import image from '../../../public/assets/'
 
 const Detail = ({ ship }) => {
     const photos=[];
@@ -10,7 +11,7 @@ const Detail = ({ ship }) => {
         <Link  to={`ship/${ship.length}`} variant="link" >
             <Card  maxW='sm' boxShadow='2xl' p='4'>
             <Image
-                            src='./assets/X-wing.jpeg'
+                            src=''
                             alt={`${ship.name}`}
                             borderRadius='lg'
                             className='detailcard'

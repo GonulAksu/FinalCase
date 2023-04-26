@@ -1,13 +1,11 @@
 import { createContext,useContext,useEffect,useState } from "react";
 import axios from 'axios';
-
 const ShipsContext=createContext();
 
 export const ShipsProvider=({children})=>{
     const [starships,setStarships]=useState([]);
     const [name_model,setName_Model]=useState('');
     const [loa,setLoa]=useState(true);
-
     // const [searchApi,setSearchApi]=useState([]);
 
     // useEffect(()=>{
