@@ -6,23 +6,25 @@ import { ShipsProvider } from './context/ShipsContext';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
   return (
+    <>
     <div className="App">
       <Router>
         <ShipsProvider>
           <Container></Container>
-        <Routes>
+          <Routes>
            <Route path='/' Component={Starships}/>
             <Route path='/ship/:shipId' Component={ShipDetail}/>
             </Routes>
+           
         </ShipsProvider>
       </Router>
     </div>
+    </>
   );
 }
 

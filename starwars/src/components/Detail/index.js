@@ -15,18 +15,22 @@ const Detail = ({ ship }) => {
                             borderRadius='lg'
                             height="300px"
                             width="400px"
+                            // objectFit='contain'
                         />
                 <CardBody p='2'>
                     <Stack mt='4' spacing='3'>
-                        <Heading color='white' textTransform='uppercase'  size='md'> {ship.name}</Heading>
+                        <Heading color='white' textTransform='uppercase' fontFamily= 'Crete Round, serif'  size='md'> {ship.name}</Heading>
                         <Divider />
-                        <Text  align={"start"} color='#008ae6
-                        ' fontSize='lg' textTransform='capitalize'>
-                          <Text as='b'  textTransform='uppercase'  >Model: </Text>{ship.model}
+                       
+                          <Text as='b' align={"start"} 
+                         fontSize='lg'  color='#1A94DA' textTransform='uppercase'>Model : <Text display='inline'color='white' textTransform='capitalize'>
+                               &nbsp;{ship.model}
+                           </Text>
                         </Text>
-                        <Text  align={"start"} color='#008ae6' fontSize='lg' textTransform='capitalize'>
-                        <Text as='b'  textTransform='uppercase' >Hyperdrive Rating: </Text>
-                             {ship.hyperdrive_rating}
+                        <Text as='b' align={"start"} 
+                         fontSize='lg'  color='#1A94DA' textTransform='uppercase'>Hyperdrive Rating :<Text display='inline'color='white' textTransform='capitalize'>
+                              &nbsp; {ship.hyperdrive_rating}
+                           </Text>
                         </Text>
                     </Stack>
                 </CardBody>

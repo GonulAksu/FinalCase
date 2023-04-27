@@ -1,11 +1,21 @@
 body {
-background-image:linear-gradient(to right,rgba(0, 0, 0, 0.913),rgba(236, 243, 248, 0.2)) !important;
-height: 100%;
+ 
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.913),rgba(236, 243, 248, 0.2)) !important;
+  font-family:  'Crete Round', serif !important;
 }
 .App {
   text-align: center;
   margin:auto 50px;
  
+  
+}
+.grid {
+  grid-template-columns:repeat(3, 1fr)
+}
+@media screen and (max-width: 48em) {
+  .grid {
+    grid-template-columns:repeat(2, 1fr)
+  }
 }
 
 /* .my-element {

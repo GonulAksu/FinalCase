@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import useListShips from '../../context/ShipsContext';
-import { Alert, AlertIcon, Text, Stack, FormControl, Input, Button, HStack, Container, Box } from '@chakra-ui/react';
+import { Text, Stack, FormControl, Input, Button, HStack, Container, Box } from '@chakra-ui/react';
 import { SearchIcon, WarningIcon } from '@chakra-ui/icons'
 
 const validate = values => {
@@ -41,18 +41,17 @@ const Form = () => {
                         <Box w="400px" h="25px">
 
                             <Input type='text' onChange={handleChange}
-                                id="nameModel" name="nameModel" bg="white" placeholder="Name/Model" />
+                                id="nameModel" name="nameModel" bg="white" placeholder="Name/Model"
+                                variant='ghost' />
                         </Box>
                     </FormControl>
                     <Box>
-                        <Button
-                            mt={4}
-                            colorScheme='twitter'
-                            type='submit'
-                        >
-                            <SearchIcon boxSize={5} />
+                        <Button colorScheme='teal' variant='solid'
+                         type='submit'
+                         mt={4}>
+                             <SearchIcon boxSize={5} />
                         </Button>
-                    </Box>
+                     </Box>
                 </HStack>
             </form>
 
