@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const Container = () => {
     return (
         <Stack spacing={6}>
-            <Link to="/" variant="link">
-                <Heading textShadow='1px 1px #ff0000' m='6' as='h1' size='4xl' noOfLines={1}>
+           
+                <Heading textTransform='uppercase' textShadow='3px 3px #008ae6' m='6' as='h1' size='4xl' noOfLines={1} color="white">
                     Star Wars
                 </Heading>
-            </Link>
+           
         </Stack>
     )
 }

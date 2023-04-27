@@ -18,11 +18,15 @@ function App() {
         <ShipsProvider>
           {/* <Starships></Starships> */}
           {/* <SearchList></SearchList> */}
-          <Container></Container>
-          <Routes>
-            <Route path="/" Component={Starships} />
+    
+        <Routes>
+           <Route path='/'>
+              <Container></Container>
+              <Starships></Starships>
+           </Route>
+  
             <Route path='/ship/:shipId' Component={ShipDetail}/>
-          </Routes>
+            </Routes>
         </ShipsProvider>
       </Router>
     </div>

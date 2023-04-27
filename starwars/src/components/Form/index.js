@@ -45,10 +45,10 @@ const Form = () => {
                     <Box>
                         <Button
                             mt={4}
-                            colorScheme='teal'
+                            colorScheme='twitter'
                             type='submit'
                         >
-                            <SearchIcon />
+                            <SearchIcon boxSize={5}/>
                         </Button>
                     </Box>
                 </HStack>

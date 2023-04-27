@@ -1,5 +1,6 @@
 body {
-background-image:linear-gradient(to right,rgba(9, 6, 42, 0.2),rgba(180, 212, 245, 0.2)) !important;
+background-image:linear-gradient(to right,rgba(0, 0, 0, 0.913),rgba(236, 243, 248, 0.2)) !important;
+height: 100%;
 }
 .App {
   text-align: center;
@@ -16,8 +17,11 @@ background-image:linear-gradient(to right,rgba(9, 6, 42, 0.2),rgba(180, 212, 245
   display: inline-block;
   transform: rotate(45deg);
 } */
-
+.detailcard {
+  transition: all .2s ease;
+}
 .detailcard:hover{
-  cursor: url('./img/icons8-r2-d2-38.png') 16 16, auto;
+  /* cursor: url('./img/icons8-r2-d2-38.png') 16 16, auto; */
+  transform: translateY(-10px);
 
 }
