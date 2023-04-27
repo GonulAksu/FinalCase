@@ -1,15 +1,10 @@
 import React from 'react';
-import { Grid, Card, CardHeader, CardBody, CardFooter, Stack, Divider, Button, Image, Heading, Text, ButtonGroup, } from '@chakra-ui/react';
+import {Card, CardBody,Stack, Divider, Image, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import useListShips from '../../context/ShipsContext';
 
 
 const Detail = ({ ship }) => {
-    // const photos=[
-    //     '../../assets/DeathStar.png',
-    //     '../../assets/'
-
-    // ];
+  
 
     return (
         <Link  to={`ship/${ship.length}`} variant="link" >

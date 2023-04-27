@@ -6,28 +6,13 @@ export const ShipsProvider=({children})=>{
     const [starships,setStarships]=useState([]);
     const [name_model,setName_Model]=useState('');
     const [loa,setLoa]=useState(true);
-    // const [searchApi,setSearchApi]=useState([]);
 
-    // useEffect(()=>{
-    //     axios('https://swapi.dev/api/starships')
-    //     .then((res)=>setStarships(res.data.results))
-    //     .catch((e)=>console.log(e));
-    // },[]);
-    
-    // useEffect(()=>{
-    //     axios(`https://swapi.dev/api/starships/?search=${name_model}`)
-    //     .then((res)=>setSearchApi(res.data.results))
-    //     .catch((e)=>console.log(e));
-    // },[name_model]);
-
-     useEffect(()=>{
+  useEffect(()=>{
         axios(`https://swapi.dev/api/starships/?search=${name_model}
        `).then((res)=>setStarships(res.data.results))
        .catch((e)=>console.log(e))
        .finally(()=>setLoa(false));
-     
-        
-    },[name_model]);
+     },[name_model]);
     
     const values={
         starships,
@@ -35,9 +20,7 @@ export const ShipsProvider=({children})=>{
         name_model,
         setName_Model,
         loa,
-        setLoa
-        // searchApi,
-        // setSearchApi
+        setLoa,
     }
 
     return <ShipsContext.Provider value={values}>{children}</ShipsContext.Provider>

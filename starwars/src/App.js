@@ -1,7 +1,6 @@
 import './App.css';
 import Container from './components/Container';
 import ShipDetail from './components/ShipDetail';
-// import SearchList from './components/SearchList';
 import Starships from './components/Starships';
 import { ShipsProvider } from './context/ShipsContext';
 import {
@@ -16,15 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <ShipsProvider>
-          {/* <Starships></Starships> */}
-          {/* <SearchList></SearchList> */}
-    
+          <Container></Container>
         <Routes>
-           <Route path='/'>
-              <Container></Container>
-              <Starships></Starships>
-           </Route>
-  
+           <Route path='/' Component={Starships}/>
             <Route path='/ship/:shipId' Component={ShipDetail}/>
             </Routes>
         </ShipsProvider>

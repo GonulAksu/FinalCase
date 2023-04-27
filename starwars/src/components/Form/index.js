@@ -1,8 +1,8 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import useListShips from '../../context/ShipsContext';
-import { Alert, AlertIcon, Stack, FormControl, Input, Button, FormHelperText, HStack, Container, Box } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons'
+import { Alert, AlertIcon, Text, Stack, FormControl, Input, Button, HStack, Container, Box } from '@chakra-ui/react';
+import { SearchIcon, WarningIcon } from '@chakra-ui/icons'
 
 const validate = values => {
     const errors = {};
@@ -27,13 +27,15 @@ const Form = () => {
         <Container>
             <form onSubmit={handleSubmit}>
                 {errors.nameModel ?
-                    <Stack spacing={3}>
-                        <Box w="400px">
-                            <Alert rounded='md' alignSelf={'center'}
-                                status='warning'>
-                                <AlertIcon />
-                                {errors.nameModel}
-                            </Alert></Box></Stack> : null}
+                    <Stack spacing={2}>
+
+                        <Text textTransform='capitalize'>
+                            <WarningIcon />   &nbsp;
+                            {errors.nameModel}
+
+                        </Text>
+
+                    </Stack> : null}
                 <HStack spacing="25px">
                     <FormControl>
                         <Box w="400px" h="25px">
@@ -48,7 +50,7 @@ const Form = () => {
                             colorScheme='twitter'
                             type='submit'
                         >
-                            <SearchIcon boxSize={5}/>
+                            <SearchIcon boxSize={5} />
                         </Button>
                     </Box>
                 </HStack>
