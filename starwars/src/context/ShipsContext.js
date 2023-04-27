@@ -21,10 +21,12 @@ export const ShipsProvider=({children})=>{
     // },[name_model]);
 
      useEffect(()=>{
-        axios(`https://swapi.dev/api/starships/?search=${name_model}`)
-        .then((res)=>setStarships(res.data.results))
-        .catch((e)=>console.log(e))
-        .finally(()=>setLoa(false))
+        axios(`https://swapi.dev/api/starships/?search=${name_model}
+       `).then((res)=>setStarships(res.data.results))
+       .catch((e)=>console.log(e))
+       .finally(()=>setLoa(false));
+     
+        
     },[name_model]);
     
     const values={
