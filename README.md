@@ -1,5 +1,5 @@
 # Star Wars
-[Project](http://localhost:3000)
+
 ### FinalCase
 FMSSBilişimandPatika
 
