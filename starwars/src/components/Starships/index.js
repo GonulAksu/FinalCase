@@ -14,7 +14,6 @@ const Starships = () => {
     const loadMore=()=>{
         setLoadpage(loadpage+loadpage);
     }
-    console.log(starships);
     return (
         <div>
             <Form></Form>

@@ -19,7 +19,6 @@ function App() {
             <Routes>
               <Route path='/' Component={Starships} />
               <Route path='/ship/:shipId' Component={ShipDetail} />
-
             </Routes>
           </ShipsProvider>
         </Router>
