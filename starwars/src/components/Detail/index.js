@@ -7,15 +7,15 @@ const Detail = ({ ship }) => {
   
 
     return (
-        <Link  to={`ship/${ship.length}`} variant="link" >
+        <Link  to={`/ship/${ship.name}`} variant="link" >
             <Card  className='detailcard'  maxW='sm' boxShadow='dark-lg' p='1' backgroundColor="rgba(0, 15, 26,0.1)">
             <Image
                             src={require(`../../assets/${ship.name}.jpeg`)}
                             alt={`${ship.name}`}
                             borderRadius='lg'
                             height="300px"
-                            width="400px"
-                            // objectFit='contain'
+
+                            maxW={{ base: '100%', sm: '400px' }}
                         />
                 <CardBody p='2'>
                     <Stack mt='4' spacing='3'>

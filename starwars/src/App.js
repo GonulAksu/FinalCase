@@ -12,18 +12,18 @@ import {
 function App() {
   return (
     <>
-    <div className="App">
-      <Router>
-        <ShipsProvider>
-          <Container></Container>
-          <Routes>
-           <Route path='/' Component={Starships}/>
-            <Route path='/ship/:shipId' Component={ShipDetail}/>
+      <div className="App">
+        <Router>
+          <ShipsProvider>
+            <Container></Container>
+            <Routes>
+              <Route path='/' Component={Starships} />
+              <Route path='/ship/:shipId' Component={ShipDetail} />
+
             </Routes>
-           
-        </ShipsProvider>
-      </Router>
-    </div>
+          </ShipsProvider>
+        </Router>
+      </div>
     </>
   );
 }

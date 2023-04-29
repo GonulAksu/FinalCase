@@ -10,6 +10,7 @@ const Starships = () => {
     const { starships, loa } = useListShips();
     const [loadpage, setLoadpage] = useState(3);
     const slice = starships.slice(0, loadpage);
+    
     const loadMore=()=>{
         setLoadpage(loadpage+loadpage);
     }
@@ -25,6 +26,7 @@ const Starships = () => {
                     emptyColor='gray.200'
                     color='blue.500'
                     size='xl'
+                    margin={6}
                 /> :
                     slice.length === 0 ? <NotFound />
                         : <><Grid className='grid' marginY="50px" gap={6}>
