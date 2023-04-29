@@ -6,7 +6,7 @@ import { ArrowLeftIcon } from '@chakra-ui/icons';
 
 const ShipDetail = () => {
   const { shipId } = useParams();
-  console.log(shipId);
+ 
   const { starships } = useListShips();
   const shipName = starships.find((s) => {
     return s.name === shipId
